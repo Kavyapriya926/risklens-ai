@@ -1,0 +1,14 @@
+transaction_id,amount,merchant_category,hour_of_day,day_of_week,is_international,is_new_merchant,card_age_days,velocity_24h,distance_from_home_km,is_fraud_actual
+TXN-LEGIT-001,1500.00,retail,10,1,false,false,730,1,5.0,false
+TXN-LEGIT-002,450.50,food_beverage,12,2,false,false,365,1,2.0,false
+TXN-LEGIT-003,8200.00,travel,14,3,false,false,1095,1,15.0,false
+TXN-LEGIT-004,320.00,grocery,9,0,false,false,548,2,3.0,false
+TXN-LEGIT-005,2500.00,electronics,11,4,false,false,912,1,8.0,false
+TXN-MED-001,12000.00,online_marketplace,20,5,false,true,90,3,50.0,false
+TXN-MED-002,7500.00,gaming,22,6,false,false,45,4,20.0,false
+TXN-MED-003,25000.00,financial_services,18,1,true,false,180,2,200.0,false
+TXN-HIGH-001,95000.00,jewelry,2,6,true,true,5,15,900.0,true
+TXN-HIGH-002,75000.00,gaming,3,0,true,true,8,12,750.0,true
+TXN-HIGH-003,45000.00,financial_services,1,5,true,true,3,20,600.0,true
+TXN-HIGH-004,120000.00,electronics,4,6,true,true,2,18,1200.0,true
+TXN-HIGH-005,65000.00,online_marketplace,23,6,true,true,7,10,850.0,true

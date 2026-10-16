@@ -1,0 +1,44 @@
+# RiskLens AI — Python dependencies
+# Tested on Python 3.14.2 / Windows (amd64)
+# All packages have prebuilt cp314 wheels on PyPI — no source builds required.
+#
+# IMPORTANT: The original pins (scikit-learn==1.4.2, numpy==1.26.4, scipy==1.13.0,
+# pandas==2.2.2, imbalanced-learn==0.12.2) were written before Python 3.14 existed.
+# None of those versions have cp314 wheels. pip falls back to source builds, which
+# fail because scikit-learn 1.4.x's build system requires numpy==2.0.0rc1 (a
+# pre-release that does not exist on PyPI).
+#
+# All version changes below are minimum-bump upgrades to the first release that
+# ships a cp314-cp314-win_amd64 wheel and is mutually compatible.
+
+# --- Web framework ---
+fastapi==0.143.1          # 0.111.0 → 0.143.1 (starlette 1.8 compatibility on 3.14)
+uvicorn[standard]==0.54.0 # 0.29.0  → 0.54.0  (httptools cp314 wheel)
+starlette==1.8.0          # transitive; pinned to avoid accidental downgrades
+
+# --- Database ---
+sqlalchemy==2.1.4         # 2.0.30 → 2.1.4 (tested working, no API breaks)
+# alembic removed: the project uses SQLAlchemy create_all() directly, not migrations
+
+# --- Validation ---
+pydantic==2.13.4          # 2.7.1 → 2.13.4 (must match pydantic-core below)
+pydantic-settings==2.16.0 # 2.2.1 → 2.16.0
+python-multipart==0.0.32  # 0.0.9 → 0.0.32 (0.0.9 incompatible with starlette 1.x)
+
+# --- ML stack (all require cp314 wheels — first available versions) ---
+scikit-learn==1.9.0       # 1.4.2 → 1.9.0  (first release with cp314 wheels on PyPI)
+pandas==2.3.3             # 2.2.2 → 2.3.3  (2.2.x has no cp314 wheel)
+numpy==2.4.0              # 1.26.4 → 2.4.0 (1.26.x: Requires-Python <3.13)
+joblib==1.5.3             # 1.4.2 → 1.5.3  (pure Python, cp314 compatible)
+scipy==1.18.0             # 1.13.0 → 1.18.0 (1.13.x has no cp314 wheel)
+imbalanced-learn==0.14.2  # 0.12.2 → 0.14.2 (requires scikit-learn >=1.6; 0.12.x
+                          #   incompatible with sklearn 1.9 API changes)
+
+# --- Utilities ---
+aiofiles==25.1.0          # 23.2.1 → 25.1.0 (23.x has no cp314 wheel)
+httpx==0.28.1             # 0.27.0 → 0.28.1 (minor, already installed)
+python-dotenv==1.2.2      # 1.0.1  → 1.2.2  (pure Python, any version fine)
+
+# --- Testing ---
+pytest==9.1.1             # 8.2.0  → 9.1.1  (8.x incompatible with pytest-asyncio 1.x)
+pytest-asyncio==1.4.0     # 0.23.6 → 1.4.0  (new major with simplified async mode)

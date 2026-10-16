@@ -1,0 +1,233 @@
+{
+  "version": "v20261016_045946",
+  "trained_at": "2026-10-16T04:59:46.416315+00:00",
+  "best_model": "random_forest",
+  "dataset_size": 5000,
+  "train_size": 4000,
+  "test_size": 1000,
+  "fraud_rate_pct": 5.0,
+  "lr_metrics": {
+    "name": "logistic_regression",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "pr_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "confusion_matrix": [
+      [
+        950,
+        0
+      ],
+      [
+        0,
+        50
+      ]
+    ],
+    "pr_curve_points": [
+      {
+        "precision": 0.05,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.0527,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.0559,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.0593,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.0633,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.0678,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.073,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.0791,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.0864,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.0949,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.1055,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.1185,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.1355,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.1582,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.1894,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.237,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.3165,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.4717,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.9434,
+        "recall": 1.0
+      },
+      {
+        "precision": 1.0,
+        "recall": 0.0
+      }
+    ],
+    "threshold_used": 0.5,
+    "support_fraud": 50,
+    "support_total": 1000
+  },
+  "rf_metrics": {
+    "name": "random_forest",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "pr_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "confusion_matrix": [
+      [
+        950,
+        0
+      ],
+      [
+        0,
+        50
+      ]
+    ],
+    "pr_curve_points": [
+      {
+        "precision": 0.05,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.1667,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.1916,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.2137,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.2415,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.2564,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.2762,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.2994,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.3425,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.3759,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.4132,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.463,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.5208,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.625,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.7463,
+        "recall": 1.0
+      },
+      {
+        "precision": 0.9259,
+        "recall": 1.0
+      },
+      {
+        "precision": 1.0,
+        "recall": 0.82
+      },
+      {
+        "precision": 1.0,
+        "recall": 0.58
+      },
+      {
+        "precision": 1.0,
+        "recall": 0.3
+      },
+      {
+        "precision": 1.0,
+        "recall": 0.0
+      }
+    ],
+    "threshold_used": 0.5,
+    "support_fraud": 50,
+    "support_total": 1000
+  },
+  "feature_names": [
+    "amount_log",
+    "amount_zscore",
+    "hour_sin",
+    "hour_cos",
+    "day_sin",
+    "day_cos",
+    "is_international",
+    "is_new_merchant",
+    "velocity_24h_log",
+    "card_age_days_log",
+    "distance_log",
+    "is_night",
+    "is_weekend",
+    "is_high_risk_category"
+  ],
+  "data_source": "synthetic_demo",
+  "disclaimer": "Metrics computed on a genuinely held-out 20% test set. This model is trained on synthetic demo data for demonstration purposes only. Do not use for real financial decisions."
+}
